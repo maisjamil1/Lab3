@@ -1,0 +1,36 @@
+
+ #photo-template {
+  display: none;
+}
+
+h2{
+  font-size:30px;
+  color: rgb(255, 255, 255);
+  text-shadow:2px 2px grey;
+  text-align: center;
+
+}
+
+p{
+  font-size:20px;
+  text-align: center;
+}
+
+
+
+h1{
+  margin: 40px auto;
+  /* height: 50px; */
+  text-align: center;
+  font-size: 30px;
+}
+select{
+  background-color: rgb(116, 153, 253);
+font-size: 20px;}
+
+img {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 20px; 
+}

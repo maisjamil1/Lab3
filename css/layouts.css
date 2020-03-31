@@ -1,0 +1,40 @@
+
+*{
+  box-sizing: border-box;
+}
+
+header{
+ margin-top: 0px;
+  height: 400px;
+  position: relative;
+}
+
+main{
+  width: 1500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+select{
+  display: block;
+  margin: 40px auto;
+  height: 50px;
+}
+
+section {
+  width: 400px;
+  height: 500px;
+  float: left;
+  text-align: center;
+  margin: 10px;
+  overflow: hidden;
+} 
+
+
+
+footer{
+  clear: both;
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(69, 70, 70);
+}
