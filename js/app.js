@@ -15,7 +15,7 @@ $(document).ready(function () {
  
     Animals.prototype.render = function () {
         let $animalClone = $('#photo-template').clone();
-
+        // let $animalClone = $('#photo-template').html();
         $animalClone.find('h2').text(this.title);
         $animalClone.find('img').attr('src', this.image_url);
         $animalClone.find('p').text(this.description);
@@ -24,6 +24,7 @@ $(document).ready(function () {
         $animalClone.addClass(this.keyword);
         $animalClone.removeAttr('id');
         $animalClone.attr('id', this.title);
+        // var rendered = Mustache.render($animalClone , this);
         $('main').append($animalClone);
      
     }
@@ -36,7 +37,7 @@ $(document).ready(function () {
   }
   
     
-    const readJson = () => {
+    const readJson1 = () => {
         $.ajax('data/page-1.json', { method: 'GET', dataType: 'JSON' }).then(data => {
             data.forEach(animal => {
                 let animalObj = new Animals(animal);
@@ -45,8 +46,33 @@ $(document).ready(function () {
             });
         });
     };
-    readJson();
+    readJson1();
     
+    const readJson2 = () => {
+        $.ajax('data/page-2.json', { method: 'GET', dataType: 'JSON' }).then(data => {
+            data.forEach(animal => {
+                let animalObj = new Animals(animal);
+                animalObj.render();
+                animalObj.runderOptions();
+            });
+        });
+    };
+
+    var bt1 = $('#btn1');
+  bt1.on('click', function(){
+    $('main').hide();
+    readJson1()});
+
+    var bt2 = $('#btn2');
+  bt2.on('click',function() {
+    $('main').hide();
+    readJson2()});
+
+
+
+
+
+
 
 
             let $SelectedAnimal = $('select');
