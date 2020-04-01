@@ -15,7 +15,7 @@ $(document).ready(function () {
  
     Animals.prototype.render = function () {
         let $animalClone = $('#photo-template').clone();
-
+        // let $animalClone = $('#photo-template').html();
         $animalClone.find('h2').text(this.title);
         $animalClone.find('img').attr('src', this.image_url);
         $animalClone.find('p').text(this.description);
@@ -24,6 +24,7 @@ $(document).ready(function () {
         $animalClone.addClass(this.keyword);
         $animalClone.removeAttr('id');
         $animalClone.attr('id', this.title);
+        // var rendered = Mustache.render($animalClone , this);
         $('main').append($animalClone);
      
     }
