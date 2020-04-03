@@ -16,18 +16,21 @@
       <select>
         <option value="default"><h3></h3></option>
       </select>
+      <div id="btn12">
       <button id="btn1"> Page 1</button>
-      <button id="btn2"> Page 1</button>
+      <button id="btn2"> Page 2</button>
+      </div>
     </header>
   <main>
-    <script id="animals-template" type="x-tmpl-mustache"></script>
-    <!-- //- -->
-    <section id="photo-template">
+    
+    <script id="photo-template" type="x-tmpl-mustache">
+    <section class ="{{keyword}}">
       <h2>{{title}}</h2>
       <img src="{{image_url}}" alt="">
       <p>{{description}}</p>
     </section>
   </script>
+  <div id="photoCon"></div>
   </main>
   <footer>
     &copy; 2018 Code Fellows
