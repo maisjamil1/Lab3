@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Caveat|News+Cycle|Permanent+Marker&display=swap');
 
 *{
-  background-color: rgb(248, 210, 216);
+  background-color: rgb(255, 228, 232);
 }
 h1,h2{
   font-family: 'Permanent Marker';
@@ -12,3 +12,12 @@ p{
   font-family: cursive;
 }
 
+#btn1{
+  font-family: cursive;
+  font-weight: bold;
+
+}
+#btn2{
+  font-family: cursive;
+  font-weight: bold;
+}

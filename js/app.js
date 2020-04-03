@@ -31,7 +31,20 @@ $(document).ready(function () {
   }
   
     
+  function pages() {
+    $('#btn1').on('click', function() {
+        $('#photoCon').html("");
+        readJson(1);
+      
+    })
+
     
+    $('#btn2').on('click', function() {
+        $('#photoCon').html("");
+        readJson(2);
+    })
+}
+pages();
     
 
     const readJson = (page$no) => {
@@ -65,17 +78,3 @@ console.log($SelectedValue);
 });
 
 
-function pageRender() {
-    $('#btn1').on('click', function() {
-        $('#photoCon').html("");
-        readJson(1);
-      
-    })
-
-    
-    $('#btn2').on('click', function() {
-        $('#photoCon').html("");
-        readJson(2);
-    })
-}
-pageRender();
