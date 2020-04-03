@@ -18,7 +18,7 @@ $(document).ready(function () {
     Animals.prototype.render = function() {
         let $animalClone = $('#photo-template').html();
         var rendered = Mustache.render($animalClone, this);
-        $('main').append(rendered);
+        $('#photoCon').append(rendered);
     };
 
 
@@ -48,16 +48,7 @@ $(document).ready(function () {
 
 
 
-    var bt1 = $('#btn1');
-  bt1.on('click', function(){
-    $('main').hide();
-    readJson1()});
-
-    var bt2 = $('#btn2');
-  bt2.on('click',function() {
-    $('main').hide();
-    readJson2()});
-
+  
 
 
 
@@ -65,7 +56,6 @@ $(document).ready(function () {
             $SelectedAnimal.on('change', function () {
                 let $SelectedValue = $(this).val();
                 $('section').hide();
-                // section.havattr($SelectedValue)
                 $(`.${$SelectedValue}`).show();
 
 
@@ -75,3 +65,17 @@ console.log($SelectedValue);
 });
 
 
+function pageRender() {
+    $('#btn1').on('click', function() {
+        $('#photoCon').html("");
+        readJson(1);
+      
+    })
+
+    
+    $('#btn2').on('click', function() {
+        $('#photoCon').html("");
+        readJson(2);
+    })
+}
+pageRender();
